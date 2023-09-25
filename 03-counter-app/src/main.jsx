@@ -4,12 +4,13 @@ import { App } from './HelloWorldApp';
 import { FirstApp } from './FirstApp';
 
 import './index.css'
-import { CounterApp } from './CounterApp';
+// import { CounterApp } from './CounterApp';
 
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
     <React.StrictMode>
-        <CounterApp value={12} />
+        {/* <CounterApp value={12} /> */}
+        <FirstApp title='hola, soy pipe' />
     </React.StrictMode>
 )
