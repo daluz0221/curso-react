@@ -1,0 +1,22 @@
+Proyectos a realizar
+	se termina la sección de los heroes del curso de react, hasta el momento se han
+	realizado las siguientes apps
+		a. GifExpert
+		b. Pruebas de varios hooks (no app como tal
+		c. HeroesApp
+	por lo que se procese a realizar dos aplicaciones independientes para probar y practicar
+	el conocimiento adquirido
+		1. Carrito
+			a. Debe mostrar listado de productos
+			b. Debe filtrar por categorias (3 categorias)
+			c. debe permitir la busqueda de productos y mostrar varias coincidencias
+			d. Debe mostrar el detalle de un producto
+			e. Debe de tener pruebas unitarias
+		2. Crear Pokedex sencilla
+			a. Mostrar info traida de una API
+			b. Debe tener rutas privadas, por ende un login
+				b.1 si no está logged, solo verá 10 pokemons y dos pestañas
+				b2. si está logged verá 150 y 3 pestañas
+			c. Debe permitir busqueda de pokemons individual o por coincidencia
+			d. Debe  mostrar el detalle de un pokemon
+			e. Debe tener pruebas unitarias
