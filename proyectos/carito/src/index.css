@@ -1,0 +1,29 @@
+button {
+  width: 100%;
+}
+
+
+.span-price {
+  margin-bottom: 5px;
+  padding-bottom: 10px;
+  font-size: 1.5rem;
+}
+
+.price-low {
+  font-size: 1rem;
+  color: rgb(161, 161, 161);
+}
+
+.percent-discount{
+  background-color: rgb(255, 255, 88);
+  border-radius: 30%;
+  width: 3rem;
+  display: inline-block;
+  margin-left: .5rem;
+  font-size: .8rem;
+  text-align: center;
+}
+
+.new-price {
+  font-size: 1.5rem;
+}
