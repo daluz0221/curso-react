@@ -27,3 +27,7 @@ button {
 .new-price {
   font-size: 1.5rem;
 }
+
+.subCategory-filter {
+  margin-left: 1rem;
+}

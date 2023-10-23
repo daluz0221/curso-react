@@ -26,10 +26,10 @@ export const Product = ({producto}) => {
                 has_discount && <small className='new-price'>${ price - (price * discount) }</small>
             }
             <Box component="fieldset" mb={3} borderColor="transparent">
-                <Typography component="legend">Read only</Typography>
-                <Rating name="read-only" value={rating} precision={0.5} readOnly />
+                
+                <Rating name="read-only" value={rating} precision={1} readOnly />
             </Box>
-            <button className="btn btn-primary">Ver más</button>
+            <button className="btn btn-success">Ver más</button>
         </div>
     </div>
 

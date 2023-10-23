@@ -1,7 +1,21 @@
 import React from 'react'
+import { filtros } from '../data/filtros'
+import { FiltroNav } from './FiltroNav'
 
 export const Navbar = () => {
+
+
+  
   return (
-    <h2>Navbar para los filtros</h2>
+    <>
+      <div className="container">
+      <h2>Filtros</h2>
+        {
+          filtros.map( (filtro) => (
+              <FiltroNav filtro={filtro} key={filtro.id} />
+              ))
+        }     
+      </div>
+    </>
   )
 }

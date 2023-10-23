@@ -1,20 +1,22 @@
 import React from 'react'
-import { Ordenamiento } from './components/Ordenamiento'
 import { Navbar } from './components/Navbar'
 import { Catalogo } from './components/Catalogo'
+import { SearchProduct } from '../Productos/components/SearchProduct'
 
 export const General = () => {
   return (
     <>
-        <h1>Catalogo productos de vestir</h1>
 
 
         <div className="container">
+            <div className="row text-center mb-4 mt-4">
 
-            <div className="row">
-                {/* Componente para ordenar los productos que ya están en pantalla */}
-                <Ordenamiento />
+                <h1>Catalogo productos de vestir</h1>
             </div>
+
+           <div className="row">
+            <SearchProduct />
+           </div>
 
             <div className="row">
 
