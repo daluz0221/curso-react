@@ -10,7 +10,7 @@ name: 'journal',
         savedMessage: '',
         notes: [],
         active: null,
-        imageUrls: ''
+        imageUrls: []
     },
     reducers: {
         savingNewNote: (state) => {
@@ -42,8 +42,22 @@ name: 'journal',
 
           state.savedMessage = `${action.payload.title}, actualizada correctamente`
         },
-        deleteNote: (state,action) => {
-          
+        setPhotosToActivenote: (state, action) => {
+          state.active.imageUrls = [...state.active.imageUrls, ...action.payload];
+          state.isSaving = false;
+        },
+
+        clearNotesLogout: (state) => {
+          state.isSaving = false;
+          state.savedMessage = '';
+          state.notes = [];
+          state.active = null
+        },
+        deleteNoteById: (state, action) => {
+          state.active = null;
+          state.notes = state.notes.filter( note =>{
+              return note.id !== action.payload
+          } )
         }
     }
 })
@@ -51,10 +65,12 @@ name: 'journal',
 // Action creators are generated for each case reducer function
 export const { 
     addNewEmptyNote,
-    deleteNote,
+    deleteNoteById,
     savingNewNote,
     setActiveNote,
+    clearNotesLogout,
     setNotes,
     setSaving,
     updatedNote,
+    setPhotosToActivenote
  } = journalSlice.actions;
