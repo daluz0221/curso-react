@@ -2,6 +2,7 @@
 import { initializeApp } from "firebase/app";
 import { getAuth } from 'firebase/auth';
 import { getFirestore } from 'firebase/firestore/lite'
+import { getEnvironments } from "../helpers";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -15,16 +16,30 @@ import { getFirestore } from 'firebase/firestore/lite'
 //   appId: "1:592794792557:web:1874fc05d5fa83d7ed4564"
 // };
 
+// console.log(import.meta.env);
+const {
+  VITE_apiKey,
+  VITE_authDomain,
+  VITE_databaseURL,
+  VITE_projectId,
+  VITE_storageBucket,
+  VITE_messagingSenderId,
+  VITE_appId,
+  VITE_measurementId
+} = getEnvironments();
+
+//Test
 const firebaseConfig = {
-  apiKey: "AIzaSyDjQnTbQx2MSh4pq-PT5w0orcCVvrkkJgA",
-  authDomain: "mp-prueba-d1ce9.firebaseapp.com",
-  databaseURL: "https://mp-prueba-d1ce9-default-rtdb.firebaseio.com",
-  projectId: "mp-prueba-d1ce9",
-  storageBucket: "mp-prueba-d1ce9.appspot.com",
-  messagingSenderId: "315859443131",
-  appId: "1:315859443131:web:7a8d39e608bdfb41dcf89e",
-  measurementId: "G-5ZLGT09BM6"
+  apiKey: VITE_apiKey, 
+  authDomain: VITE_authDomain, 
+  databaseURL: VITE_databaseURL, 
+  projectId: VITE_projectId, 
+  storageBucket: VITE_storageBucket, 
+  messagingSenderId: VITE_messagingSenderId,
+  appId: VITE_appId, 
+  measurementId: VITE_measurementId, 
 };
+
 
 // Initialize Firebase
 export const FirebaseApp = initializeApp(firebaseConfig);
